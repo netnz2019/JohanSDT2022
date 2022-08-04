@@ -28,8 +28,9 @@ public class home extends javax.swing.JFrame {
 
         Parent = new javax.swing.JPanel();
         homepage = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        combo1 = new javax.swing.JComboBox<>();
+        addmember = new javax.swing.JButton();
+        selectmember = new javax.swing.JComboBox<>();
+        title = new javax.swing.JLabel();
         addmemberpage = new javax.swing.JPanel();
         homebutton1 = new javax.swing.JButton();
         name = new javax.swing.JLabel();
@@ -43,48 +44,112 @@ public class home extends javax.swing.JFrame {
         dateofbirthmember = new javax.swing.JTextField();
         ddmmyyyy = new javax.swing.JLabel();
         savemember = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         homepage2 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
-        jTabbedPane3 = new javax.swing.JTabbedPane();
-        jTabbedPane4 = new javax.swing.JTabbedPane();
+        memberparent = new javax.swing.JTabbedPane();
+        memberhome = new javax.swing.JPanel();
+        loggedinas = new javax.swing.JLabel();
+        currentmember = new javax.swing.JTextField();
+        agemember = new javax.swing.JLabel();
+        weightmember1 = new javax.swing.JLabel();
+        noofbouts1 = new javax.swing.JLabel();
+        joineddate = new javax.swing.JLabel();
+        editmemberdata = new javax.swing.JButton();
+        homebutton3 = new javax.swing.JButton();
+        ageofmember = new javax.swing.JTextField();
+        weightofmember = new javax.swing.JTextField();
+        noofboutsofmember = new javax.swing.JTextField();
+        joineddatemember = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        enterdatamain = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        enterbutton3 = new javax.swing.JButton();
+        viewdatamain = new javax.swing.JPanel();
+        viewdataselection = new javax.swing.JPanel();
+        viewdataoverall1 = new javax.swing.JButton();
+        viewdataspecificbutton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        viewdataspecificdate = new javax.swing.JPanel();
+        returnbutton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        viewdataoverall = new javax.swing.JPanel();
+        returnbutton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
         Parent.setLayout(new java.awt.CardLayout());
 
-        jButton1.setText("Add Member");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        homepage.setPreferredSize(new java.awt.Dimension(613, 450));
+
+        addmember.setText("Add Member");
+        addmember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                addmemberActionPerformed(evt);
             }
         });
 
-        combo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose Member", "Johan", "Lucan", "Caleb", "James" }));
+        selectmember.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose Member", "Johan", "Lucan", "Caleb", "James" }));
+        selectmember.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectmemberActionPerformed(evt);
+            }
+        });
+
+        title.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        title.setText("Pychamcia");
+        title.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout homepageLayout = new javax.swing.GroupLayout(homepage);
         homepage.setLayout(homepageLayout);
         homepageLayout.setHorizontalGroup(
             homepageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homepageLayout.createSequentialGroup()
-                .addGap(147, 147, 147)
-                .addGroup(homepageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(combo1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addGroup(homepageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(homepageLayout.createSequentialGroup()
+                        .addGap(234, 234, 234)
+                        .addGroup(homepageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(addmember, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(selectmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(homepageLayout.createSequentialGroup()
+                        .addGap(206, 206, 206)
+                        .addComponent(title)))
+                .addContainerGap(240, Short.MAX_VALUE))
         );
         homepageLayout.setVerticalGroup(
             homepageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, homepageLayout.createSequentialGroup()
-                .addContainerGap(154, Short.MAX_VALUE)
-                .addComponent(combo1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
+                .addGap(47, 47, 47)
+                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(133, 133, 133)
+                .addComponent(selectmember, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(addmember, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(310, Short.MAX_VALUE))
         );
 
         Parent.add(homepage, "card2");
+
+        addmemberpage.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
 
         homebutton1.setText("Home");
         homebutton1.addActionListener(new java.awt.event.ActionListener() {
@@ -126,14 +191,21 @@ public class home extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel2.setText("Add Member");
+
         javax.swing.GroupLayout addmemberpageLayout = new javax.swing.GroupLayout(addmemberpage);
         addmemberpage.setLayout(addmemberpageLayout);
         addmemberpageLayout.setHorizontalGroup(
             addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addmemberpageLayout.createSequentialGroup()
-                .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(addmemberpageLayout.createSequentialGroup()
-                        .addGap(76, 76, 76)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(199, 199, 199))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addmemberpageLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addmemberpageLayout.createSequentialGroup()
                         .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(name)
                             .addComponent(noofbouts)
@@ -144,30 +216,33 @@ public class home extends javax.swing.JFrame {
                             .addComponent(namemember)
                             .addGroup(addmemberpageLayout.createSequentialGroup()
                                 .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(noboutsmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(addmemberpageLayout.createSequentialGroup()
                                         .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(weightmember, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
-                                            .addComponent(dateofbirthmember))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(ddmmyyyy)))
-                                .addGap(25, 25, 25))))
-                    .addGroup(addmemberpageLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(kgs)
-                        .addGap(63, 63, 63)))
-                .addGap(45, 45, 45))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addmemberpageLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(savemember)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(homebutton1)
-                .addGap(22, 22, 22))
+                                            .addComponent(weightmember)
+                                            .addComponent(dateofbirthmember, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(addmemberpageLayout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(ddmmyyyy))
+                                            .addGroup(addmemberpageLayout.createSequentialGroup()
+                                                .addGap(44, 44, 44)
+                                                .addComponent(kgs))))
+                                    .addComponent(noboutsmember, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 285, Short.MAX_VALUE)))
+                        .addGap(23, 23, 23))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addmemberpageLayout.createSequentialGroup()
+                        .addGap(359, 359, 359)
+                        .addComponent(savemember)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(homebutton1)))
+                .addContainerGap())
         );
         addmemberpageLayout.setVerticalGroup(
             addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addmemberpageLayout.createSequentialGroup()
-                .addGap(82, 82, 82)
+                .addGap(48, 48, 48)
+                .addComponent(jLabel2)
+                .addGap(79, 79, 79)
                 .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(name)
                     .addComponent(namemember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -190,41 +265,442 @@ public class home extends javax.swing.JFrame {
                 .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(homebutton1)
                     .addComponent(savemember))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(302, Short.MAX_VALUE))
         );
 
         Parent.add(addmemberpage, "card3");
 
-        jTabbedPane1.addTab("Enter data", jTabbedPane2);
-        jTabbedPane1.addTab("Edit data", jTabbedPane3);
-        jTabbedPane1.addTab("View data", jTabbedPane4);
+        loggedinas.setText("Logged in as: ");
+
+        currentmember.setEditable(false);
+        currentmember.setText("jTextField1");
+
+        agemember.setText("Age");
+
+        weightmember1.setText("Weight");
+
+        noofbouts1.setText("# of Bouts");
+
+        joineddate.setText("Joined Date");
+
+        editmemberdata.setText("Edit Member Data");
+        editmemberdata.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editmemberdataActionPerformed(evt);
+            }
+        });
+
+        homebutton3.setText("Switch member");
+        homebutton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homebutton3ActionPerformed(evt);
+            }
+        });
+
+        ageofmember.setEditable(false);
+        ageofmember.setText("jTextField1");
+
+        weightofmember.setEditable(false);
+        weightofmember.setText("jTextField1");
+
+        noofboutsofmember.setEditable(false);
+        noofboutsofmember.setText("jTextField1");
+
+        joineddatemember.setEditable(false);
+        joineddatemember.setText("jTextField1");
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel11.setText("Home");
+
+        javax.swing.GroupLayout memberhomeLayout = new javax.swing.GroupLayout(memberhome);
+        memberhome.setLayout(memberhomeLayout);
+        memberhomeLayout.setHorizontalGroup(
+            memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memberhomeLayout.createSequentialGroup()
+                .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(memberhomeLayout.createSequentialGroup()
+                        .addGap(204, 204, 204)
+                        .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(memberhomeLayout.createSequentialGroup()
+                                .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, memberhomeLayout.createSequentialGroup()
+                                        .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(agemember)
+                                            .addComponent(weightmember1))
+                                        .addGap(31, 31, 31))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, memberhomeLayout.createSequentialGroup()
+                                        .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(noofbouts1)
+                                                .addComponent(joineddate))
+                                            .addComponent(loggedinas, javax.swing.GroupLayout.Alignment.TRAILING))
+                                        .addGap(18, 18, 18)))
+                                .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(joineddatemember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(noofboutsofmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(weightofmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ageofmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(currentmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(homebutton3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(editmemberdata)))
+                    .addGroup(memberhomeLayout.createSequentialGroup()
+                        .addGap(255, 255, 255)
+                        .addComponent(jLabel11)))
+                .addContainerGap(247, Short.MAX_VALUE))
+        );
+        memberhomeLayout.setVerticalGroup(
+            memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(memberhomeLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel11)
+                .addGap(53, 53, 53)
+                .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(loggedinas)
+                    .addComponent(currentmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(agemember)
+                    .addComponent(ageofmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(weightmember1)
+                    .addComponent(weightofmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(noofbouts1)
+                    .addComponent(noofboutsofmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(joineddate)
+                    .addComponent(joineddatemember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addComponent(editmemberdata)
+                .addGap(18, 18, 18)
+                .addComponent(homebutton3)
+                .addContainerGap(222, Short.MAX_VALUE))
+        );
+
+        memberparent.addTab("Home", memberhome);
+
+        jTextField1.setText("jTextField1");
+
+        jTextField2.setText("jTextField1");
+
+        jTextField3.setText("jTextField1");
+
+        jTextField4.setText("jTextField1");
+
+        jTextField5.setText("jTextField1");
+
+        jTextField6.setText("jTextField1");
+
+        jTextField7.setText("jTextField1");
+
+        jTextField8.setText("jTextField1");
+
+        jTextField9.setText("jTextField1");
+
+        jLabel5.setText("Round 1");
+
+        jLabel6.setText("Round 2");
+
+        jLabel7.setText("Round 3");
+
+        jLabel8.setText("Punch Power");
+
+        jLabel9.setText("Punch Count");
+
+        jLabel10.setText("Intensity");
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel12.setText("Enter Data");
+
+        enterbutton3.setText("Enter");
+
+        javax.swing.GroupLayout enterdatamainLayout = new javax.swing.GroupLayout(enterdatamain);
+        enterdatamain.setLayout(enterdatamainLayout);
+        enterdatamainLayout.setHorizontalGroup(
+            enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(enterdatamainLayout.createSequentialGroup()
+                .addGap(94, 94, 94)
+                .addGroup(enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(enterdatamainLayout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addComponent(jLabel5)
+                        .addGap(69, 69, 69)
+                        .addComponent(jLabel6)
+                        .addGap(69, 69, 69)
+                        .addComponent(jLabel7))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterdatamainLayout.createSequentialGroup()
+                        .addGroup(enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel12)
+                            .addGroup(enterdatamainLayout.createSequentialGroup()
+                                .addGroup(enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterdatamainLayout.createSequentialGroup()
+                                        .addGroup(enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING))
+                                        .addGap(18, 18, 18))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterdatamainLayout.createSequentialGroup()
+                                        .addComponent(jLabel10)
+                                        .addGap(27, 27, 27)))
+                                .addGroup(enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(enterdatamainLayout.createSequentialGroup()
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterdatamainLayout.createSequentialGroup()
+                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, enterdatamainLayout.createSequentialGroup()
+                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(26, 26, 26)
+                                        .addGroup(enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(enterbutton3)
+                                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                        .addGap(18, 18, 18)
+                        .addGroup(enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(120, Short.MAX_VALUE))
+        );
+        enterdatamainLayout.setVerticalGroup(
+            enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(enterdatamainLayout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel12)
+                .addGap(114, 114, 114)
+                .addGroup(enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7))
+                .addGap(26, 26, 26)
+                .addGroup(enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(enterdatamainLayout.createSequentialGroup()
+                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(enterdatamainLayout.createSequentialGroup()
+                        .addGroup(enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8))
+                        .addGap(22, 22, 22)
+                        .addGroup(enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9))
+                        .addGap(18, 18, 18)
+                        .addGroup(enterdatamainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10))))
+                .addGap(54, 54, 54)
+                .addComponent(enterbutton3)
+                .addContainerGap(128, Short.MAX_VALUE))
+        );
+
+        memberparent.addTab("Enter Data ", enterdatamain);
+
+        viewdatamain.setLayout(new java.awt.CardLayout());
+
+        viewdataoverall1.setText("overall");
+        viewdataoverall1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewdataoverall1ActionPerformed(evt);
+            }
+        });
+
+        viewdataspecificbutton.setText("Specific");
+        viewdataspecificbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewdataspecificbuttonActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel4.setText("View Data Selection");
+
+        javax.swing.GroupLayout viewdataselectionLayout = new javax.swing.GroupLayout(viewdataselection);
+        viewdataselection.setLayout(viewdataselectionLayout);
+        viewdataselectionLayout.setHorizontalGroup(
+            viewdataselectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewdataselectionLayout.createSequentialGroup()
+                .addContainerGap(140, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(135, 135, 135))
+            .addGroup(viewdataselectionLayout.createSequentialGroup()
+                .addGap(224, 224, 224)
+                .addGroup(viewdataselectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(viewdataoverall1, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                    .addComponent(viewdataspecificbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        viewdataselectionLayout.setVerticalGroup(
+            viewdataselectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewdataselectionLayout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(jLabel4)
+                .addGap(57, 57, 57)
+                .addComponent(viewdataspecificbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(viewdataoverall1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(341, Short.MAX_VALUE))
+        );
+
+        viewdatamain.add(viewdataselection, "card2");
+
+        returnbutton2.setText("Return");
+        returnbutton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                returnbutton2ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel1.setText("View Data Specific Date");
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        javax.swing.GroupLayout viewdataspecificdateLayout = new javax.swing.GroupLayout(viewdataspecificdate);
+        viewdataspecificdate.setLayout(viewdataspecificdateLayout);
+        viewdataspecificdateLayout.setHorizontalGroup(
+            viewdataspecificdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewdataspecificdateLayout.createSequentialGroup()
+                .addContainerGap(85, Short.MAX_VALUE)
+                .addGroup(viewdataspecificdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewdataspecificdateLayout.createSequentialGroup()
+                        .addGroup(viewdataspecificdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(returnbutton2))
+                        .addGap(62, 62, 62))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewdataspecificdateLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(90, 90, 90))))
+        );
+        viewdataspecificdateLayout.setVerticalGroup(
+            viewdataspecificdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewdataspecificdateLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel1)
+                .addGap(27, 27, 27)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(returnbutton2)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        viewdatamain.add(viewdataspecificdate, "card4");
+
+        returnbutton1.setText("Return");
+        returnbutton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                returnbutton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel3.setText("View Data Overall ");
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        javax.swing.GroupLayout viewdataoverallLayout = new javax.swing.GroupLayout(viewdataoverall);
+        viewdataoverall.setLayout(viewdataoverallLayout);
+        viewdataoverallLayout.setHorizontalGroup(
+            viewdataoverallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewdataoverallLayout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 67, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewdataoverallLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(viewdataoverallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewdataoverallLayout.createSequentialGroup()
+                        .addComponent(returnbutton1)
+                        .addGap(50, 50, 50))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewdataoverallLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(145, 145, 145))))
+        );
+        viewdataoverallLayout.setVerticalGroup(
+            viewdataoverallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(viewdataoverallLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel3)
+                .addGap(37, 37, 37)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 448, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(returnbutton1)
+                .addGap(30, 30, 30))
+        );
+
+        viewdatamain.add(viewdataoverall, "card3");
+
+        memberparent.addTab(" View Data", viewdatamain);
 
         javax.swing.GroupLayout homepage2Layout = new javax.swing.GroupLayout(homepage2);
         homepage2.setLayout(homepage2Layout);
         homepage2Layout.setHorizontalGroup(
             homepage2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 439, Short.MAX_VALUE)
+            .addComponent(memberparent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         homepage2Layout.setVerticalGroup(
             homepage2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+            .addGroup(homepage2Layout.createSequentialGroup()
+                .addComponent(memberparent, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         Parent.add(homepage2, "card4");
 
-        getContentPane().add(Parent);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Parent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Parent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void addmemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addmemberActionPerformed
         // TODO add your handling code here:
         Parent.removeAll();
         Parent.add(addmemberpage);
         Parent.repaint();
         Parent.revalidate();
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_addmemberActionPerformed
 
     private void homebutton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebutton1ActionPerformed
         // TODO add your handling code here:
@@ -245,7 +721,61 @@ public class home extends javax.swing.JFrame {
 
     private void savememberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savememberActionPerformed
         // TODO add your handling code here:
+        String member = namemember.getText();
     }//GEN-LAST:event_savememberActionPerformed
+
+    private void selectmemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectmemberActionPerformed
+        // TODO add your handling code here:
+        Parent.removeAll();
+        Parent.add(homepage2);
+        Parent.repaint();
+        Parent.revalidate();   
+    }//GEN-LAST:event_selectmemberActionPerformed
+
+    private void editmemberdataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editmemberdataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editmemberdataActionPerformed
+
+    private void homebutton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebutton3ActionPerformed
+        // TODO add your handling code here:
+        Parent.removeAll();
+        Parent.add(homepage);
+        Parent.repaint();
+        Parent.revalidate();
+        
+    }//GEN-LAST:event_homebutton3ActionPerformed
+
+    private void viewdataoverall1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewdataoverall1ActionPerformed
+        // TODO add your handling code here:
+        viewdatamain.removeAll();
+        viewdatamain.add(viewdataoverall);
+        viewdatamain.repaint();
+        viewdatamain.revalidate();
+    }//GEN-LAST:event_viewdataoverall1ActionPerformed
+
+    private void returnbutton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnbutton1ActionPerformed
+        // TODO add your handling code here:
+        viewdatamain.removeAll();
+        viewdatamain.add(viewdataselection);
+        viewdatamain.repaint();
+        viewdatamain.revalidate();
+    }//GEN-LAST:event_returnbutton1ActionPerformed
+
+    private void viewdataspecificbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewdataspecificbuttonActionPerformed
+        // TODO add your handling code here:
+        viewdatamain.removeAll();
+        viewdatamain.add(viewdataspecificdate);
+        viewdatamain.repaint();
+        viewdatamain.revalidate();
+    }//GEN-LAST:event_viewdataspecificbuttonActionPerformed
+
+    private void returnbutton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnbutton2ActionPerformed
+        // TODO add your handling code here:
+        viewdatamain.removeAll();
+        viewdatamain.add(viewdataselection);
+        viewdatamain.repaint();
+        viewdatamain.revalidate();
+    }//GEN-LAST:event_returnbutton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -285,26 +815,72 @@ public class home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Parent;
+    private javax.swing.JButton addmember;
     private javax.swing.JPanel addmemberpage;
-    private javax.swing.JComboBox<String> combo1;
+    private javax.swing.JLabel agemember;
+    private javax.swing.JTextField ageofmember;
+    private javax.swing.JTextField currentmember;
     private javax.swing.JLabel dateofbirth;
     private javax.swing.JTextField dateofbirthmember;
     private javax.swing.JLabel ddmmyyyy;
+    private javax.swing.JButton editmemberdata;
+    private javax.swing.JButton enterbutton3;
+    private javax.swing.JPanel enterdatamain;
     private javax.swing.JButton homebutton1;
+    private javax.swing.JButton homebutton3;
     private javax.swing.JPanel homepage;
     private javax.swing.JPanel homepage2;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTabbedPane jTabbedPane4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel joineddate;
+    private javax.swing.JTextField joineddatemember;
     private javax.swing.JLabel kgs;
+    private javax.swing.JLabel loggedinas;
+    private javax.swing.JPanel memberhome;
+    private javax.swing.JTabbedPane memberparent;
     private javax.swing.JLabel name;
     private javax.swing.JTextField namemember;
     private javax.swing.JSpinner noboutsmember;
     private javax.swing.JLabel noofbouts;
+    private javax.swing.JLabel noofbouts1;
+    private javax.swing.JTextField noofboutsofmember;
+    private javax.swing.JButton returnbutton1;
+    private javax.swing.JButton returnbutton2;
     private javax.swing.JButton savemember;
+    private javax.swing.JComboBox<String> selectmember;
+    private javax.swing.JLabel title;
+    private javax.swing.JPanel viewdatamain;
+    private javax.swing.JPanel viewdataoverall;
+    private javax.swing.JButton viewdataoverall1;
+    private javax.swing.JPanel viewdataselection;
+    private javax.swing.JButton viewdataspecificbutton;
+    private javax.swing.JPanel viewdataspecificdate;
     private javax.swing.JLabel weight;
     private javax.swing.JTextField weightmember;
+    private javax.swing.JLabel weightmember1;
+    private javax.swing.JTextField weightofmember;
     // End of variables declaration//GEN-END:variables
 }
