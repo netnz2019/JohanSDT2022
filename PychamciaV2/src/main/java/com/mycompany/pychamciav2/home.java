@@ -4,11 +4,16 @@
  */
 package com.mycompany.pychamciav2;
 
+import java.util.ArrayList;
+import javax.swing.SpinnerNumberModel;
+
 /**
  *
  * @author Pieter Struwig
  */
 public class home extends javax.swing.JFrame {
+
+    private SpinnerNumberModel boutsdata;
 
     /**
      * Creates new form NewJFrame
@@ -31,6 +36,7 @@ public class home extends javax.swing.JFrame {
         addmember = new javax.swing.JButton();
         selectmember = new javax.swing.JComboBox<>();
         title = new javax.swing.JLabel();
+        infopagemain = new javax.swing.JTextArea();
         addmemberpage = new javax.swing.JPanel();
         homebutton1 = new javax.swing.JButton();
         name = new javax.swing.JLabel();
@@ -38,7 +44,8 @@ public class home extends javax.swing.JFrame {
         weight = new javax.swing.JLabel();
         noofbouts = new javax.swing.JLabel();
         namemember = new javax.swing.JTextField();
-        noboutsmember = new javax.swing.JSpinner();
+        boutsdata = new SpinnerNumberModel(spinnerValue,spinnerMin,spinnerMax,spinnerInterval);
+        noboutsmember = new javax.swing.JSpinner(boutsdata);
         weightmember = new javax.swing.JTextField();
         kgs = new javax.swing.JLabel();
         dateofbirthmember = new javax.swing.JTextField();
@@ -61,6 +68,7 @@ public class home extends javax.swing.JFrame {
         noofboutsofmember = new javax.swing.JTextField();
         joineddatemember = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         enterdatamain = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
@@ -94,6 +102,7 @@ public class home extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        editentereddata = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -108,7 +117,7 @@ public class home extends javax.swing.JFrame {
             }
         });
 
-        selectmember.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose Member", "Johan", "Lucan", "Caleb", "James" }));
+        selectmember.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose Member" }));
         selectmember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 selectmemberActionPerformed(evt);
@@ -118,6 +127,14 @@ public class home extends javax.swing.JFrame {
         title.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         title.setText("Pychamcia");
         title.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        infopagemain.setEditable(false);
+        infopagemain.setColumns(20);
+        infopagemain.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        infopagemain.setRows(5);
+        infopagemain.setText("This program is for storing the data that is gathered from the Hykso \nprogram. The purpose of the program is to make the data that is \nentered easily accessible and viewable. ");
+        infopagemain.setSelectedTextColor(new java.awt.Color(0, 0, 0));
+        infopagemain.setSelectionColor(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout homepageLayout = new javax.swing.GroupLayout(homepage);
         homepage.setLayout(homepageLayout);
@@ -132,19 +149,24 @@ public class home extends javax.swing.JFrame {
                             .addComponent(selectmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(homepageLayout.createSequentialGroup()
                         .addGap(206, 206, 206)
-                        .addComponent(title)))
-                .addContainerGap(240, Short.MAX_VALUE))
+                        .addComponent(title))
+                    .addGroup(homepageLayout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(infopagemain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         homepageLayout.setVerticalGroup(
             homepageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, homepageLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(133, 133, 133)
+                .addGap(35, 35, 35)
+                .addComponent(infopagemain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(selectmember, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(27, 27, 27)
                 .addComponent(addmember, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(310, Short.MAX_VALUE))
+                .addContainerGap(293, Short.MAX_VALUE))
         );
 
         Parent.add(homepage, "card2");
@@ -181,6 +203,11 @@ public class home extends javax.swing.JFrame {
         kgs.setText("Kgs");
 
         dateofbirthmember.setToolTipText("");
+        dateofbirthmember.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateofbirthmemberActionPerformed(evt);
+            }
+        });
 
         ddmmyyyy.setText("DD/MM/YYYY");
 
@@ -198,44 +225,46 @@ public class home extends javax.swing.JFrame {
         addmemberpage.setLayout(addmemberpageLayout);
         addmemberpageLayout.setHorizontalGroup(
             addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addmemberpageLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(199, 199, 199))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addmemberpageLayout.createSequentialGroup()
+            .addGroup(addmemberpageLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addmemberpageLayout.createSequentialGroup()
                         .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(name)
-                            .addComponent(noofbouts)
-                            .addComponent(weight)
-                            .addComponent(dateofbirth))
-                        .addGap(37, 37, 37)
-                        .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(namemember)
-                            .addGroup(addmemberpageLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addmemberpageLayout.createSequentialGroup()
                                 .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(name)
+                                    .addComponent(noofbouts)
+                                    .addComponent(weight)
+                                    .addComponent(dateofbirth))
+                                .addGap(37, 37, 37)
+                                .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(namemember)
                                     .addGroup(addmemberpageLayout.createSequentialGroup()
-                                        .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(weightmember)
-                                            .addComponent(dateofbirthmember, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(addmemberpageLayout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(ddmmyyyy))
-                                            .addGroup(addmemberpageLayout.createSequentialGroup()
-                                                .addGap(44, 44, 44)
-                                                .addComponent(kgs))))
-                                    .addComponent(noboutsmember, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 285, Short.MAX_VALUE)))
-                        .addGap(23, 23, 23))
+                                                .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                    .addComponent(weightmember)
+                                                    .addComponent(dateofbirthmember, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(addmemberpageLayout.createSequentialGroup()
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(ddmmyyyy))
+                                                    .addGroup(addmemberpageLayout.createSequentialGroup()
+                                                        .addGap(44, 44, 44)
+                                                        .addComponent(kgs))))
+                                            .addComponent(noboutsmember, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(0, 286, Short.MAX_VALUE)))
+                                .addGap(23, 23, 23))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addmemberpageLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(savemember)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(homebutton1)))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addmemberpageLayout.createSequentialGroup()
-                        .addGap(359, 359, 359)
-                        .addComponent(savemember)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(homebutton1)))
-                .addContainerGap())
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
+                        .addGap(199, 199, 199))))
         );
         addmemberpageLayout.setVerticalGroup(
             addmemberpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -312,6 +341,13 @@ public class home extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel11.setText("Home");
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout memberhomeLayout = new javax.swing.GroupLayout(memberhome);
         memberhome.setLayout(memberhomeLayout);
         memberhomeLayout.setHorizontalGroup(
@@ -320,7 +356,7 @@ public class home extends javax.swing.JFrame {
                 .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(memberhomeLayout.createSequentialGroup()
                         .addGap(204, 204, 204)
-                        .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(memberhomeLayout.createSequentialGroup()
                                 .addGroup(memberhomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, memberhomeLayout.createSequentialGroup()
@@ -341,8 +377,9 @@ public class home extends javax.swing.JFrame {
                                     .addComponent(weightofmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(ageofmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(currentmember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(homebutton3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(editmemberdata)))
+                            .addComponent(editmemberdata, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(homebutton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(memberhomeLayout.createSequentialGroup()
                         .addGap(255, 255, 255)
                         .addComponent(jLabel11)))
@@ -377,7 +414,9 @@ public class home extends javax.swing.JFrame {
                 .addComponent(editmemberdata)
                 .addGap(18, 18, 18)
                 .addComponent(homebutton3)
-                .addContainerGap(222, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addContainerGap(188, Short.MAX_VALUE))
         );
 
         memberparent.addTab("Home", memberhome);
@@ -630,6 +669,8 @@ public class home extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
+        editentereddata.setText("Edit Data");
+
         javax.swing.GroupLayout viewdataoverallLayout = new javax.swing.GroupLayout(viewdataoverall);
         viewdataoverall.setLayout(viewdataoverallLayout);
         viewdataoverallLayout.setHorizontalGroup(
@@ -642,6 +683,8 @@ public class home extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(viewdataoverallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewdataoverallLayout.createSequentialGroup()
+                        .addComponent(editentereddata, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(returnbutton1)
                         .addGap(50, 50, 50))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewdataoverallLayout.createSequentialGroup()
@@ -656,7 +699,9 @@ public class home extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 448, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(returnbutton1)
+                .addGroup(viewdataoverallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(returnbutton1)
+                    .addComponent(editentereddata))
                 .addGap(30, 30, 30))
         );
 
@@ -720,8 +765,30 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_weightmemberActionPerformed
 
     private void savememberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savememberActionPerformed
-        // TODO add your handling code here:
-        String member = namemember.getText();
+        // TODO add your handling code here:                  
+        int count = selectmember.getItemCount();
+        ArrayList<String> builder;
+        builder = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+                builder.add(selectmember.getItemAt(i));
+                if (i < count - 1) {
+                    
+                }
+            }
+        builder.add (namemember.getText());
+        builder.add (weightmember.getText());
+        builder.add (noofbouts.getText());
+        builder.add (dateofbirthmember.getText());
+        
+        StringBuilder data = new StringBuilder(); 
+        for (String s : builder){
+            data.append(s);
+            
+        }
+ 
+        
+        selectmember.setModel(new javax.swing.DefaultComboBoxModel<>(data));
+
     }//GEN-LAST:event_savememberActionPerformed
 
     private void selectmemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectmemberActionPerformed
@@ -734,6 +801,10 @@ public class home extends javax.swing.JFrame {
 
     private void editmemberdataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editmemberdataActionPerformed
         // TODO add your handling code here:
+        ageofmember.setEditable(true); 
+        weightofmember.setEditable(true); 
+        
+        
     }//GEN-LAST:event_editmemberdataActionPerformed
 
     private void homebutton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homebutton3ActionPerformed
@@ -776,6 +847,14 @@ public class home extends javax.swing.JFrame {
         viewdatamain.repaint();
         viewdatamain.revalidate();
     }//GEN-LAST:event_returnbutton2ActionPerformed
+
+    private void dateofbirthmemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateofbirthmemberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dateofbirthmemberActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -823,6 +902,7 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel dateofbirth;
     private javax.swing.JTextField dateofbirthmember;
     private javax.swing.JLabel ddmmyyyy;
+    private javax.swing.JButton editentereddata;
     private javax.swing.JButton editmemberdata;
     private javax.swing.JButton enterbutton3;
     private javax.swing.JPanel enterdatamain;
@@ -830,6 +910,8 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JButton homebutton3;
     private javax.swing.JPanel homepage;
     private javax.swing.JPanel homepage2;
+    private javax.swing.JTextArea infopagemain;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -883,4 +965,10 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel weightmember1;
     private javax.swing.JTextField weightofmember;
     // End of variables declaration//GEN-END:variables
+    // Own Variables 
+    private     Integer     spinnerMax = 999;
+    private     Integer     spinnerMin = 0;
+    private     Integer     spinnerInterval = 1;
+    private     Integer     spinnerValue = 0;
 }
+
